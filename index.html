@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <title>Ali | online store</title>
+</head>
+<body class="overflow-x-hidden">
+    <header class="w-full">
+        <div class="flex items-center w-full shadow-sm  justify-between px-5 lg:px-10 xl:px-24 py-5">
+            <img class="xl:w-52 lg:w-40 md:w-32 w-32" src="./img/logo.png" alt="">
+            <div class="md:flex hidden items-center bg-[#f3f3f3]  ">
+                <div><select class="py-5 px-5 sm:text-lg bg-transparent" id="category" name="category">
+
+                    <option value="All Categories">All Categories</option>
+                    <option value="Electronics &amp; Digita">Electronics &amp; Digita</option>
+                    <option value="Phones &amp; Tablet">Phones &amp; Tablety</option>
+                    <option value="Fashion &amp; Clothings">Fashion &amp; Clothings</option>
+                    <option value="Telivsion &amp; Monitor">Telivsion &amp; Monitor</option>
+                    <option value="Jewelry &amp; Watches">Jewelry &amp; Watches</option>
+                    <option value="Washing Machine">Washing Machine</option>
+                    <option value="Toys &amp; Hobbies">Toys &amp; Hobbies</option>
+
+                </select></div>
+                <p class="text-3xl font-thin text-gray-400 ml-2">|</p>
+                <input class="h-[55px] lg:w-[400px]  w-[200px] bg-transparent px-5" placeholder="Search for Products" type="search" name="" id="">
+                <button class="bg-[#ff8716] p-5 text-lg"><i class="fa-solid fa-magnifying-glass text-white"></i></button>
+            </div>
+            
+            <div class="flex items-center gap-5">
+                <a class="relative" href="">
+                    <i class="fa-regular fa-heart text-3xl"></i>
+                    <span class="bg-[#ff8716] w-5 h-5 left-5 bottom-6 flex text-white items-center justify-center rounded-full absolute">0</span>
+                </a>
+                <a href="" class="relative">
+                    <i class="fa-solid fa-cart-shopping text-3xl"></i>
+                    <span class="bg-[#ff8716] w-5 h-5 left-5 bottom-6 flex text-white items-center justify-center rounded-full absolute">0</span>
+                </a>
+            </div>
+        </div>
+
+            <div class="flex  items-center p-5 w-full justify-between  sm:px-5 py-2 lg:px-24 shadow-sm">
+                <div class="md:hidden block">
+                    <button class="border-2 rounded-sm border-[#ff8716] px-3 py-2"><i class="fa-solid fa-bars text-2xl text-[#ff8716] "></i></button>
+                </div>
+                <div class="md:flex hidden items-center gap-10">
+                    <div class="relative">
+                    <div id="cat-btn" class="  flex    items-center bg-[#ff8716] w-fit px-5 gap-5 py-5">
+                    <i class="fa-solid fa-bars lg:text-2xl md:text-lg text-white"></i>
+                    <p class="xl:text-lg md:text-sm text-white font-bold">Browse Category</p>
+                    <i class="fa-solid fa-angle-down text-white lg:text-2xl md:text-sm"></i>
+                    </div>
+                    
+                    <div class="hidden  category_nav_list" style="transition: 0.3s;">
+                        <div class="  absolute text-black gap-5 w-full  py-5 left-0 top-16 border-x border-b border-black flex flex-col bg-[#ffffff]">
+                            <a class="border-b border-gray-200 p-2" href="#">Top 10 Offers</a>
+                            <a class="border-b border-gray-200 p-2" href="#">Electronics &amp; Digita</a>
+                            <a class="border-b border-gray-200 p-2" href="#">Phones &amp; Tablet</a>
+                            <a class="border-b border-gray-200 p-2" href="#">Fashion &amp; Clothings</a>
+                            <a class="border-b border-gray-200 p-2" href="#">Telivsion &amp; Monitor</a>
+                            <a class="border-b border-gray-200 p-2" href="#">Jewelry &amp; Watches</a>
+                            <a class="border-b border-gray-200 p-2" href="#">Toys &amp; Hobbies</a>
+                        </div>
+                    </div>
+            </div>
+            <nav class="">
+                <ul class="flex items-center  lg:gap-10 gap-5 list-none text-lg">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Accesories</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+                </div>
+                
+            <div class="flex items-center gap-5">
+                <div class=""><a class="bg-[#ff8716] py-2 flex items-center justify-center sm:px-8 px-2 text-white text-center" href="">Login <span><i class="text-white text-xl ml-2 fa-solid fa-right-to-bracket"></i></span></a></div>
+                <div><a class="bg-[#ff8716] py-2 flex items-center justify-center sm:px-8 px-2   text-white text-center" href="">Sign Up <span><i class="fa-solid fa-user-plus text-xl ml-2 text-white"></i></span></a></div>
+            </div>
+        </div> 
+    </header>
+    <section class="md:px-24 px-5 ">        
+        <div class="grid md:grid-cols-4 grid-cols-1 gap-5 py-12 w-full h-full">
+            <div class="md:col-span-3 h-full ">
+                <div class="swiper mySwiper ">
+                    <div class="swiper-wrapper relative ">
+                      <div class="swiper-slide"><img  src="./img/banner_home1.png"  alt="" style="height: 100%; width: 100%;"></div>
+                      <div class="swiper-slide"><img src="./img/banner_home2.png" alt="" style="height: 100%; width: 100%;" ></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </div>
+            <div >
+           
+                <img class="hidden md:block" src="./img/banner_home3.png" alt="">
+            </div>
+        </div>
+       
+        <div class="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 pb-24">
+            <div class="bg-[#ededed] flex items-center justify-between  gap-2  md:px-5 md:py-5 py-5 px-12 bg-cover" style="background-image: url(./img/bg_banner3.jpg);">
+               <img src="./img/banner3_1.png" alt="">  
+               <a href="" class="link-btn">
+                <div>
+                    <h5 class="sm:text-lg text-sm font-semibold " style="font-family: sans-serif;">Break Disk</h5>
+                    <h5 class="sm:text-lg text-sm font-semibold" style="font-family: sans-serif;">deals on this</h5>
+                    <div class="flex items-center gap-8">
+                     <p class="sm:text-xl text-lg text-gray-400 max-w-1">Up To</p>
+                     <span class="text-[#ff8716] font-bold text-xl sm:text-2xl">70%</span>
+                    </div>
+                    <h6 class="text-[17px] font-semibold">Shop Now</h6>
+                    </div>
+               </a>
+            </div>
+            <div class="bg-[#ededed] flex items-center gap-4 justify-between md:px-5 md:py-5 py-5 px-12 bg-cover" style="background-image: url(./img/bg_banner3.jpg);">
+                <img src="./img/banner3_2.png" alt="">  
+                <a href="" class="link-btn">
+                    <div>
+                        <h5 class="text-lg font-semibold " style="font-family: sans-serif;">Break Disk</h5>
+                        <h5 class="text-lg font-semibold" style="font-family: sans-serif;">deals on this</h5>
+                        <div class="flex items-center gap-8">
+                         <p class="text-xl text-gray-400 max-w-1">Up To</p>
+                         <span class="text-[#ff8716] font-bold text-2xl">70%</span>
+                        </div>
+                        <h6 class="text-[17px] font-semibold">Shop Now</h6>
+                        </div>
+                </a>
+             </div>
+             <div class="bg-[#ededed] flex items-center justify-between gap-4  md:px-5 md:py-5 py-5 px-12 bg-cover" style="background-image: url(./img/bg_banner3.jpg);">
+                <img src="./img/banner3_3.png" alt="">  
+                <a href="" class="link-btn">
+                    <div>
+                        <h5 class="text-lg font-semibold " style="font-family: sans-serif;">Break Disk</h5>
+                        <h5 class="text-lg font-semibold" style="font-family: sans-serif;">deals on this</h5>
+                        <div class="flex items-center gap-8">
+                         <p class="text-xl text-gray-400 max-w-1">Up To</p>
+                         <span class="text-[#ff8716] font-bold text-2xl">70%</span>
+                        </div>
+                        <h6 class="text-[17px] font-semibold">Shop Now</h6>
+                        </div>
+                </a>
+             </div>
+            
+             <div class="bg-[#ededed] flex items-center gap-4 md:px-5 md:py-5 py-5 px-12 justify-between bg-cover" style="background-image: url(./img/bg_banner3.jpg);">
+                <img src="./img/banner3_4.png" alt="">  
+                <a href="" class="link-btn">
+                    <div>
+                        <h5 class="text-lg font-semibold " style="font-family: sans-serif;">Break Disk</h5>
+                        <h5 class="text-lg font-semibold" style="font-family: sans-serif;">deals on this</h5>
+                        <div class="flex items-center gap-8">
+                         <p class="text-xl text-gray-400 max-w-1">Up To</p>
+                         <span class="text-[#ff8716] font-bold text-2xl">70%</span>
+                        </div>
+                        <h6 class="text-[17px] font-semibold">Shop Now</h6>
+                        </div>
+                </a>
+             </div>
+            
+            
+             </div>
+           
+        </div>
+        
+    </section>
+    <section class="">
+    <div class="slider_productS slide relative border-t-4 border-[#ff8716] px-12 py-5 ">
+        <div class="container ">
+
+         <div class="absolute bg-[#ff8716] -top-14 text-white text-xl px-10 py-3">
+            <h2><i class="fa-solid fa-tags"></i> Appliances</h2>
+         </div>
+            <div class="slide_product mySwiper ">
+                <div class="products swiper-wrapper  " id="swiper_items_sale">
+                    <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                        <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                        <img class="" src="./img/product/1.png  " alt="">
+                        <div class="stars text-[#ff8716]">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                        <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                        <div class="flex items-center gap-5">
+                            <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                            <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                        <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                        <img class="" src="./img/product/1.png  " alt="">
+                        <div class="stars text-[#ff8716]">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                        <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                        <div class="flex items-center gap-5">
+                            <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                            <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                        <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                        <img class="" src="./img/product/1.png  " alt="">
+                        <div class="stars text-[#ff8716]">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                        <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                        <div class="flex items-center gap-5">
+                            <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                            <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                        <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                        <img class="" src="./img/product/1.png  " alt="">
+                        <div class="stars text-[#ff8716]">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                        <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                        <div class="flex items-center gap-5">
+                            <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                            <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                        <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                        <img class="" src="./img/product/1.png  " alt="">
+                        <div class="stars text-[#ff8716]">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                        <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                        <div class="flex items-center gap-5">
+                            <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                            <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                        <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                        <img class="" src="./img/product/1.png  " alt="">
+                        <div class="stars text-[#ff8716]">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                        <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                        <div class="flex items-center gap-5">
+                            <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                            <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                        <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                        <img class="" src="./img/product/1.png  " alt="">
+                        <div class="stars text-[#ff8716]">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                        <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                        <div class="flex items-center gap-5">
+                            <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                            <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                        <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                        <img class="" src="./img/product/1.png  " alt="">
+                        <div class="stars text-[#ff8716]">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                        <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                        <div class="flex items-center gap-5">
+                            <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                            <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                        <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                        <img class="" src="./img/product/1.png  " alt="">
+                        <div class="stars text-[#ff8716]">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                        <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                        <div class="flex items-center gap-5">
+                            <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                            <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                        <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                        <img class="" src="./img/product/1.png  " alt="">
+                        <div class="stars text-[#ff8716]">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                        <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                        <div class="flex items-center gap-5">
+                            <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                            <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                        </div>
+                    </div>
+                  
+                    
+                </div>
+
+            </div>
+             
+        </div>
+    </div>
+
+    </section>
+    <section class="w-full lg:px-12 px-5 mt-20">
+        <div class="grid lg:grid-cols-3 grid-cols-1 place-items-center gap-5">
+            <img src="./img/banner_box1.jpg" alt="">
+            <img src="./img/banner_box2.jpg" alt="">
+            <img src="img/banner_box3.jpg" alt="">
+        </div>
+    </section>
+    <section class="mt-40">
+        <div class="slider_productS slide relative border-t-4 border-[#ff8716] px-12 py-5 ">
+            <div class="container ">
+    
+             <div class="absolute bg-[#ff8716] -top-14 text-white text-xl px-10 py-3">
+                <h2><i class="fa-solid fa-tags"></i> Mobiles</h2>
+             </div>
+                <div class="slide_product mySwiper ">
+                    <div class="products swiper-wrapper  " id="swiper_items_sale">
+                        <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                            <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                            <img class="" src="./img/product/1.png  " alt="">
+                            <div class="stars text-[#ff8716]">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                            <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                            <div class="flex items-center gap-5">
+                                <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                                <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                            <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                            <img class="" src="./img/product/1.png  " alt="">
+                            <div class="stars text-[#ff8716]">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                            <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                            <div class="flex items-center gap-5">
+                                <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                                <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                            <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                            <img class="" src="./img/product/1.png  " alt="">
+                            <div class="stars text-[#ff8716]">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                            <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                            <div class="flex items-center gap-5">
+                                <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                                <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                            <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                            <img class="" src="./img/product/1.png  " alt="">
+                            <div class="stars text-[#ff8716]">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                            <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                            <div class="flex items-center gap-5">
+                                <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                                <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                            <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                            <img class="" src="./img/product/1.png  " alt="">
+                            <div class="stars text-[#ff8716]">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                            <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                            <div class="flex items-center gap-5">
+                                <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                                <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                            <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                            <img class="" src="./img/product/1.png  " alt="">
+                            <div class="stars text-[#ff8716]">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                            <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                            <div class="flex items-center gap-5">
+                                <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                                <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                            <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                            <img class="" src="./img/product/1.png  " alt="">
+                            <div class="stars text-[#ff8716]">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                            <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                            <div class="flex items-center gap-5">
+                                <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                                <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                            <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                            <img class="" src="./img/product/1.png  " alt="">
+                            <div class="stars text-[#ff8716]">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                            <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                            <div class="flex items-center gap-5">
+                                <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                                <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                            <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                            <img class="" src="./img/product/1.png  " alt="">
+                            <div class="stars text-[#ff8716]">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                            <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                            <div class="flex items-center gap-5">
+                                <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                                <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product bg-white  pb-10  gap-3 p-5  w-[20%]   shadow-lg relative  flex flex-col "  >
+                            <div class="bg-red-600 text-white w-fit px-4 py-2 top-0 right-0 absolute  text-sm">%26</div> 
+                            <img class="" src="./img/product/1.png  " alt="">
+                            <div class="stars text-[#ff8716]">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <a class=" text-[16px] font-semibold" href="">Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)</a>
+                            <p class="text-[#ff8716] text-xl font-bold ">350$</p>
+                            <div class="flex items-center gap-5">
+                                <div><a class=" text-sm px-5 py-3 text-white bg-[#ff8716]" href="">Add to cart</a></div>
+                                <div><a class="py-2 px-4 text-sm border border-gray-500 " href=""><i class="fa-regular fa-heart"></i></a></div>
+                            </div>
+                        </div>
+                      
+                        
+                    </div>
+    
+                </div>
+                 
+            </div>
+        </div>
+    
+        </section>
+        <footer class=" text-gray-400">
+            <div class="py-12 px-12 gap-5 w-screen grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 bg-black">
+    
+                <div class="flex flex-col gap-5">
+                    <img class="w-40" src="img/white_logo.png" alt="">
+    
+                    <p class="max-w-60">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, vero?</p>
+    
+                    <div class="flex items-center gap-2">
+                        <a href="#"><i class="fa-solid fa-phone w-12 text-xl h-12 flex items-center justify-center rounded-lg bg-[#ff8716] text-white "></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f w-12 text-xl h-12 flex items-center justify-center rounded-lg bg-[#ff8716] text-white"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram w-12 text-xl h-12 flex items-center justify-center rounded-lg bg-[#ff8716] text-white"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp w-12 text-xl h-12 flex items-center justify-center rounded-lg bg-[#ff8716] text-white"></i></a>
+                    </div>
+                </div>
+    
+                <div class="flex flex-col gap-5">
+                    <h4 class="text-xl text-white font-bold">Find It Fast</h4>
+    
+                    <div class="flex flex-col gap-2">
+                        <a href="#"><i class="fa-solid fa-caret-right text-[#ff8716] font-bold "></i> Laptops &amp; Computers </a>
+                        <a href="#"><i class="fa-solid fa-caret-right text-[#ff8716] font-bold "></i> Smart Phones &amp; Tablets</a>
+                        <a href="#"><i class="fa-solid fa-caret-right text-[#ff8716] font-bold "></i> TV &amp; Audio</a>
+                        <a href="#"><i class="fa-solid fa-caret-right text-[#ff8716] font-bold "></i> Appliances</a>
+                        <a href="#"><i class="fa-solid fa-caret-right text-[#ff8716] font-bold "></i> Jewelry &amp; Watches</a>
+                    </div>
+                </div>
+    
+    
+                <div class="flex flex-col gap-5">
+                    <h4 class="text-xl text-white font-bold">Quick Links</h4>
+    
+                    <div class="flex flex-col gap-2">
+                        <a href="#"><i class="fa-solid fa-caret-right text-[#ff8716] font-bold "></i> Your Account </a>
+                        <a href="#"><i class="fa-solid fa-caret-right text-[#ff8716] font-bold "></i> Returns &amp; Exchanges</a>
+                        <a href="#"><i class="fa-solid fa-caret-right text-[#ff8716] font-bold "></i> Shipping &amp; Delivery</a>
+                        <a href="#"><i class="fa-solid fa-caret-right text-[#ff8716] font-bold "></i> Estimated Delivery Time</a>
+                        <a href="#"><i class="fa-solid fa-caret-right text-[#ff8716] font-bold "></i> Purchase Hisotry</a>
+                    </div>
+                </div>
+    
+    
+                <div class="flex flex-col gap-5">
+                    <h4 class="text-xl text-white font-bold">Service us</h4>
+    
+                    <div class="flex flex-col gap-2">
+                        <a href="#"><i class="fa-solid fa-caret-right text-[#ff8716] font-bold "></i> Support Center</a>
+                        <a href="#"><i class="fa-solid fa-caret-right text-[#ff8716] font-bold "></i> Term &amp; Conditions</a>
+                        <a href="#"><i class="fa-solid fa-caret-right text-[#ff8716] font-bold "></i> Privacy Policy</a>
+                        <a href="#"><i class="fa-solid fa-caret-right text-[#ff8716] font-bold "></i> Help</a>
+                        <a href="#"><i class="fa-solid fa-caret-right text-[#ff8716] font-bold "></i> FAQS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pb-10">
+                <div class="flex items-center justify-between bg-[#1d1f22] p-5">
+                    <p class="md:text-lg text-xs">© <span>Reda Store.</span> All Rights Reserved.</p>
+    
+                    <div class="payment_img">
+                        <img class="sm:w-full w-52" src="img/payment_method.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+ var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 'auto', // let fixed widths control the layout
+  spaceBetween: 40,       // spacing between slides
+  breakpoints: {
+    0: { slidesPerView: 1 },     // phones
+    640: { slidesPerView: 2 },   // tablets
+    1024: { slidesPerView: 'auto' }, // desktop/laptop: fixed width 25%
+  },
+});
+
+
+
+      </script>
+</body>
+
+</html>
